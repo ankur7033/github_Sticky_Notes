@@ -1,0 +1,114 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+    <EditText
+        android:id="@+id/editText"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:background="#0F9D58"
+        android:gravity="start|top"
+        android:hint="Enter your text here"
+        android:inputType="textMultiLine"
+        android:textAppearance="@style/TextAppearance.AppCompat.Medium"
+        android:textColor="@color/white"
+        android:textColorHint="@color/white"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.0" />
+
+    <Button
+        android:id="@+id/boldBtn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="24dp"
+        android:text="Bold"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/underLineBtn" />
+
+    <Button
+        android:id="@+id/underLineBtn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="40dp"
+        android:text="Underline"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/italicBtn"
+        app:layout_constraintStart_toEndOf="@+id/boldBtn" />
+
+    <Button
+        android:id="@+id/italicBtn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="24dp"
+        android:text="Italic"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/underLineBtn" />
+
+    <Button
+        android:id="@+id/decreaseSizeBtn"
+        android:layout_width="115dp"
+        android:layout_height="51dp"
+        android:layout_marginStart="24dp"
+        android:text="Decrease Size"
+        app:layout_constraintEnd_toStartOf="@+id/sizeTV"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/sizeTV" />
+
+    <Button
+        android:id="@+id/increaseSizeBtn"
+        android:layout_width="110dp"
+        android:layout_height="53dp"
+        android:layout_marginTop="3dp"
+        android:layout_marginEnd="30dp"
+        android:text="Increase Size"
+        app:layout_constraintEnd_toStartOf="@+id/saveButton"
+        app:layout_constraintStart_toEndOf="@+id/sizeTV"
+        app:layout_constraintTop_toTopOf="@+id/saveButton" />
+
+    <TextView
+        android:id="@+id/sizeTV"
+        android:layout_width="wrap_content"
+        android:layout_height="44dp"
+        android:paddingStart="10sp"
+        android:paddingEnd="10sp"
+        android:text="Size"
+        android:textSize="32sp"
+        app:layout_constraintEnd_toStartOf="@+id/increaseSizeBtn"
+        app:layout_constraintStart_toEndOf="@+id/decreaseSizeBtn"
+        app:layout_constraintTop_toTopOf="@+id/increaseSizeBtn" />
+
+
+
+    <Button
+        android:id="@+id/saveButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="4dp"
+        android:layout_marginBottom="28dp"
+        android:text="update"
+        android:contentDescription="Save"
+        app:layout_constraintBottom_toTopOf="@+id/italicBtn"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:srcCompat="@drawable/ic_content_save" />
+
+    <!--    <com.google.android.material.floatingactionbutton.FloatingActionButton-->
+<!--        android:id="@+id/saveButton"-->
+<!--        android:layout_width="wrap_content"-->
+<!--        android:layout_height="wrap_content"-->
+<!--        android:layout_marginEnd="20dp"-->
+<!--        android:layout_marginBottom="32dp"-->
+<!--        android:clickable="true"-->
+<!--        android:contentDescription="Save"-->
+<!--        app:layout_constraintBottom_toTopOf="@+id/italicBtn"-->
+<!--        app:layout_constraintEnd_toEndOf="parent"-->
+<!--        app:srcCompat="@drawable/ic_content_save" />-->
+</androidx.constraintlayout.widget.ConstraintLayout>
